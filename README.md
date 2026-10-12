@@ -11,17 +11,24 @@ A single FastAPI + SQLite project containing five small applications in one resp
 ## Project structure
 
 ```text
-fastapi-five-apps/
-├── main.py                 # FastAPI app and all API routes
-├── models.py               # SQLite schema, connection helper, and seed data
+Virtual-Works/
+├── task1_quick_notes/             # Task 1 documentation
+├── task2_profile_card/            # Task 2 documentation
+├── task3_coffee_rating/           # Task 3 documentation
+├── task4_quote_generator/         # Task 4 documentation
+├── task5_team_availability/       # Task 5 documentation
+├── main.py                        # Shared FastAPI app and all API routes
+├── models.py                      # Shared SQLite schema and seed data
 ├── requirements.txt
 ├── README.md
-├── app.db                  # Created automatically on first startup
+├── app.db                         # Created automatically on first startup
 └── static/
-    ├── index.html          # Single-page dashboard
-    ├── styles.css          # Responsive visual design
-    └── script.js            # Vanilla JS API client and UI events
+    ├── index.html                 # Single-page dashboard
+    ├── styles.css                 # Responsive visual design
+    └── script.js                  # Vanilla JS API client and UI events
 ```
+
+Each task now has its own top-level folder, while the five applications continue to use the shared backend and dashboard. This keeps the repository organized like a multi-task assignment without duplicating the server code.
 
 ## Run locally
 
