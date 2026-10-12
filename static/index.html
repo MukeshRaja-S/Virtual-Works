@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Five Apps Workspace</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <a class="brand" href="#top"><span class="brand-mark">5</span><span>workspace<span class="dot">.</span></span></a>
+      <span class="status-pill"><span class="pulse"></span> FastAPI online</span>
+    </header>
+    <main id="top">
+      <section class="hero">
+        <div class="eyebrow">ONE BACKEND · FIVE EXPERIENCES</div>
+        <h1>Small apps.<br><em>One shared workspace.</em></h1>
+        <p class="hero-copy">A practical collection of everyday tools, connected through one FastAPI service and a lightweight SQLite database.</p>
+        <div class="hero-meta"><span>01 — NOTES</span><span>02 — PROFILE</span><span>03 — COFFEE</span><span>04 — QUOTES</span><span>05 — TEAM</span></div>
+      </section>
+
+      <section class="app-grid">
+        <article class="card notes-card" id="task1">
+          <div class="card-head"><div><span class="kicker">01 / QUICK NOTE</span><h2>Capture a thought.</h2></div><span class="icon">✦</span></div>
+          <form id="note-form" class="stack-form"><textarea id="note-content" maxlength="1000" placeholder="Write something worth remembering..." required></textarea><div class="form-row"><span class="helper" id="note-count">0 / 1000</span><button class="button dark" type="submit">Save note <span>↗</span></button></div></form>
+          <div class="section-label">RECENT NOTES</div><div id="notes-list" class="notes-list"></div>
+        </article>
+
+        <article class="card profile-card" id="task2">
+          <div class="card-head"><div><span class="kicker">02 / PROFILE CARD</span><h2>Make an introduction.</h2></div><span class="icon">◌</span></div>
+          <form id="profile-form" class="stack-form"><label>Name<input id="profile-name" required maxlength="80" placeholder="Ada Lovelace" /></label><label>Bio<textarea id="profile-bio" maxlength="500" required placeholder="A short introduction..." rows="3"></textarea></label><label>Image URL <span class="muted">(optional)</span><input id="profile-image" type="url" placeholder="https://..." /></label><button class="button coral" type="submit">Generate card <span>↗</span></button></form>
+          <div id="profile-output" class="profile-output empty-state">Your generated card will appear here.</div>
+        </article>
+
+        <article class="card coffee-card" id="task3">
+          <div class="card-head"><div><span class="kicker">03 / COFFEE RATING</span><h2>Choose your fuel.</h2></div><span class="icon">☕</span></div>
+          <p class="subcopy">Vote for the cup that gets you through the day.</p><div id="coffee-list" class="coffee-list"></div>
+        </article>
+
+        <article class="card quote-card" id="task4">
+          <div class="card-head"><div><span class="kicker">04 / QUOTE GENERATOR</span><h2>A little perspective.</h2></div><span class="icon">“</span></div>
+          <div class="quote-display"><span class="quote-mark">“</span><blockquote id="current-quote">Tap below for a fresh idea to carry with you.</blockquote><cite id="current-author">— waiting for a quote</cite></div>
+          <button id="quote-button" class="button outline" type="button">Find a quote <span>↗</span></button><div class="section-label">RECENTLY VIEWED</div><div id="quote-history" class="quote-history"></div>
+        </article>
+
+        <article class="card team-card" id="task5">
+          <div class="card-head"><div><span class="kicker">05 / TEAM AVAILABILITY</span><h2>Know who’s around.</h2></div><span class="icon">◎</span></div>
+          <p class="subcopy">Live status for your small, brilliant team.</p><div id="team-list" class="team-list"></div>
+        </article>
+      </section>
+    </main>
+    <footer><span>FIVE APPS WORKSPACE</span><span>SQLite · FastAPI · Vanilla JS</span></footer>
+  </div>
+  <div id="toast" class="toast" role="status"></div>
+  <script src="/static/script.js"></script>
+</body>
+</html>
